@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Sticky Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+    <style>
+/* Global Styles */
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+/* Header */
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+}
+
+body {
+      font-family: "Helvetica Neue",sans-serif;
+      font-weight: lighter;
+}
+
+header {
+      width: 50%;
+      height: 20vh;
+      background: url() no-repeat 50% 50%;
+      background-size: cover;
+}
+
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+
+nav.black ul {
+      background: #000;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 5px 10px;;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      padding: 20px;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 30px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: #000;
+      }
+
+      nav.black ul {
+            background: #000;
+      }
+
+      .showing {
+            max-height: 25em;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
+/* About Section */
+
+.about {
+	background: rgb(255, 255, 255);
+	padding: 10px 0 20px 0;
+	text-align: center;
+}
+
+.about h1 {
+	font-size:70px;
+	margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.about p {
+	font-size: 20px;
+	color: #000000;
+	max-width: 600px;
+	margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.about-info {
+	margin: 2rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: left;
+}
+
+.about-img {
+	width: 20rem;
+	height: 20rem;
+
+}
+
+.about-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	object-fit: contain;
+}
+
+.about-info p {
+	font-size: 1.3rem;
+	margin: 0 2rem;
+	text-align: justify;
+}
+
+button:hover {
+	background-color: #1f9405;
+}
+
+/* Team Section */
+
+.team {
+	padding: 30px 0;
+	text-align: center;
+}
+
+.team h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+}
+
+.team-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	margin-top: 20px;
+}
+
+.card {
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	transition: transform 0.2s, box-shadow 0.2s;
+	width: 18rem;
+	height: 25rem;
+	margin-top: 10px;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+	width: 20rem;
+	height: 15rem;
+}
+
+.card-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.card-info button {
+	margin: 2rem 1rem;
+}
+
+.card-name {
+	font-size: 2rem;
+	margin: 10px 0;
+}
+
+.card-role {
+	font-size: 1rem;
+	color: #888;
+	margin: 5px 0;
+}
+
+.card-email {
+	font-size: 1rem;
+	color: #555;
+}
+
+/* Footer */
+footer {
+	background-color: #222;
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+}
+
+@media (max-width: 768px) {
+	nav {
+		display: block;
+	}
+
+	.logo {
+		text-align: center;
+	}
+
+	.nav-links {
+		margin-top: 1rem;
+		justify-content: space-between;
+	}
+
+	.nav-links li {
+		margin-right: 0;
+	}
+
+	.about h1 {
+		font-size: 2rem;
+	}
+
+	.about p {
+		font-size: 0.9rem;
+	}
+
+	.about-info {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.about-img {
+		width: 60%;
+		height: 60%;
+		margin-bottom: 1rem;
+	}
+
+	.about-info p {
+		margin: 1rem 2rem;
+	}
+
+	.about-info button {
+		margin: 1rem 2rem;
+		width: 10rem;
+	}
+
+	.team {
+		margin: 0 1rem;
+        padding: 10px 0 20px 0;
+	}
+}
+
+    </style>
+<body>
+	<header>
+        <div class="container">
+                <nav>
+                    <img src="https://1000logos.net/wp-content/uploads/2018/11/Crocs.jpg" alt="Logo" height="40px" class="logo">
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="itemgallery.html">Item Gallery</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                    </div>
+                </nav>
+	</header>
+
+	<section class="about">
+		<h1>About Us</h1>
+		<p style="font-weight: bold">
+		</p>
+		<div class="about-info">
+			<div class="about-img">
+				<img src=
+"https://logowik.com/content/uploads/images/crocs8589.jpg" alt="Geeksforgeeks">
+			</div>
+			<div>
+			<p> 
+                Crocs sandals embody a harmonious fusion of unparalleled comfort and timeless style, creating a footwear experience where every step feels like a blissful stroll in the clouds. Rooted in the philosophy that fashion and coziness should coexist seamlessly, our sandals redefine the essence of footwear.
+
+                Picture yourself slipping into the plush embrace of Crocs, where each design is meticulously crafted to cradle your feet in comfort. Our commitment to redefining comfort goes beyond the ordinary – it's an extraordinary blend of innovative technology and thoughtful design that transforms the act of walking into a delight.
+                
+                Step confidently into a world where fashion doesn't compromise on coziness; it enhances it. Crocs sandals are not just accessories; they are statements of individuality, reflecting your unique style with every step. Explore our diverse range of designs, from classic silhouettes that stand the test of time to contemporary creations that elevate your look.			</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="team">
+		<h1>Meet Our Team</h1>
+		<div class="team-cards">
+		
+			<!-- Cards here -->
+			<!-- Card 1 -->
+		
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.6435-9/81073797_1255968494590312_8161091702451339264_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7a1959&_nc_ohc=XPfkB6XygDwAX87PnW1&_nc_ht=scontent.fmnl25-5.fna&oh=00_AfDbIEgS4GoO6shZE32sWirYyzPs43xfCO6-fKip35uoFA&oe=65DED125" alt="User 1">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Calvin Ocampo</h2>
+					<p class="card-role">CEO and Founder</p>
+					<p class="card-email">calvinocampo@gmail.com</p>
+				</div>
+			</div>
+
+			<!-- Card 2 -->
+		
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.6435-9/84690070_1260471581008071_7221666085756469248_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7a1959&_nc_ohc=mMF1P0GFl5EAX9QpXHf&_nc_ht=scontent.fmnl25-5.fna&oh=00_AfDZKFh26oN11Gslq2ffU6nt0kvqm6qI7YnmX2qGQRUAzg&oe=65DEB9A3" alt="User 2">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">John Angelo Gamboa</h2>
+					<p class="card-role">Co-Founder</p>
+					<p class="card-email">johngamboa@gmail.com</p>
+				</div>
+			</div>
+		
+			<!-- Card 3 -->
+		
+			<div class="card">
+				<div class="card-img">
+					<img src=
+"https://scontent.fmnl25-4.fna.fbcdn.net/v/t1.6435-9/82316878_594525447781845_1619425502085251072_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=2z-2hfBeRNAAX8QHchI&_nc_ht=scontent.fmnl25-4.fna&oh=00_AfDmVTGm0UxjOov0-b2gxqCIVNlq2B2u2hdxRg6H5QQWCQ&oe=65DEB028" alt="User 3">
+				</div>
+				<div class="card-info">
+					<h2 class="card-name">Marshiella Anne Peralta</h2>
+					<p class="card-role">Co-Founder</p>
+					<p class="card-email">marshiella@gmail.com</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<p>© IT Students. All Rights Reserved.</p>
+	</footer>
+    <script>
+        $(document).ready(function() {
+                   $(".menu-icon").on("click", function() {
+                         $("nav ul").toggleClass("showing");
+                   });
+             });
+       
+             // Scrolling Effect
+       
+             $(window).on("scroll", function() {
+                   if($(window).scrollTop()) {
+                         $('nav').addClass('black');
+                   }
+       
+                   else {
+                         $('nav').removeClass('black');
+                   }
+             })
+       
+             </script>
+</body>
+
+</html>
