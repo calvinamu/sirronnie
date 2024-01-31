@@ -25,120 +25,45 @@ body {
 }
 
 /* Header */
-html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-}
-
 body {
-      font-family: "Helvetica Neue",sans-serif;
-      font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOh6vQVICl6CL_ssrAX6beHU7PSkeUHxrbzA&usqp=CAU'); /* Replace 'your-image-url.jpg' with the actual path to your image */
+    background-repeat: repeat;
+    background-position: 1000 0; /* Initial position */
+    background-size: 250px;
 }
 
-header {
-      width: 50%;
-      height: 20vh;
-      background: url() no-repeat 50% 50%;
-      background-size: cover;
-}
-
-.content {
-      width: 94%;
-      margin: 4em auto;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: justify;
-}
-
-.logo {
-      line-height: 60px;
-      position: fixed;
-      float: left;
-      margin: 16px 46px;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-      letter-spacing: 2px;
-}
-
-nav {
-      position: fixed;
-      width: 100%;
-      line-height: 60px;
-}
-
-nav ul {
-      line-height: 60px;
-      list-style: none;
-      background: rgba(0, 0, 0, 0);
-      overflow: hidden;
-      color: #fff;
-      padding: 0;
-      text-align: right;
-      margin: 0;
-      padding-right: 40px;
-      transition: 1s;
-}
-
-nav.black ul {
-      background: #000;
-}
-
-nav ul li {
-      display: inline-block;
-      padding: 5px 10px;;
-}
-
-nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 16px;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      padding: 20px;
-}
-
-.menu-icon {
-      line-height: 60px;
-      width: 100%;
-      background: #000;
-      text-align: right;
-      box-sizing: border-box;
-      padding: 15px 30px;
-      cursor: pointer;
-      color: #fff;
-      display: none;
-}
-
-      .logo {
-            position: fixed;
-            top: 0;
-            margin-top: 16px;
-      }
-
-      nav ul {
-            max-height: 0px;
-            background: #000;
-      }
-
-      nav.black ul {
-            background: #000;
-      }
-
-      .showing {
-            max-height: 25em;
-      }
-
-      nav ul li {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 24px;
+        nav {
+            background-color: #000000;
+            padding: 10px;
             text-align: center;
-      }
+        }
 
-      .menu-icon {
-            display: block;
-      }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ebcdcd;
+			text-decoration: none;
+        }
+
+        .logo {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
 
 /* About Section */
 
@@ -155,11 +80,11 @@ nav ul li a {
 }
 
 .about p {
-	font-size: 20px;
+	font-size: 50px;
 	color: #000000;
 	max-width: 600px;
 	margin: 0 auto;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 .about-info {
@@ -292,6 +217,7 @@ footer {
 
 	.about p {
 		font-size: 0.9rem;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	}
 
 	.about-info {
@@ -307,6 +233,7 @@ footer {
 
 	.about-info p {
 		margin: 1rem 2rem;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	}
 
 	.about-info button {
@@ -319,24 +246,23 @@ footer {
         padding: 10px 0 20px 0;
 	}
 }
-
+.team h1 {
+	text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 0 1em rgba(0, 0, 255, 0.418), 0 0 0.2em blue;
+    color: rgba(255, 255, 255, 0.8); /* Adjust the alpha value to control the opacity */
+	font-size: 50px;
+	padding-top: 25px;
+}
     </style>
 <body>
 	<header>
-        <div class="container">
-                <nav>
-                    <img src="https://1000logos.net/wp-content/uploads/2018/11/Crocs.jpg" alt="Logo" height="40px" class="logo">
-                    <div class="menu-icon">
-                        <i class="fa fa-bars fa-2x"></i>
-                    </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="itemgallery.html">Item Gallery</a></li>
-                            <li><a href="about.html">About</a></li>
-                        </ul>
-                    </div>
-                </nav>
+			<nav>
+				<div class="logo">
+					<img src="https://i.pinimg.com/1200x/7e/e1/e1/7ee1e143c95b0426c9f5ffe38847c760.jpg" alt="Logo">
+				</div>
+				<a href="index.html">Home</a>
+				<a href="itemgallery.html">Gallery</a>
+				<a href="about.html">About</a>
+			</nav>
 	</header>
 
 	<section class="about">
@@ -346,7 +272,7 @@ footer {
 		<div class="about-info">
 			<div class="about-img">
 				<img src=
-"https://logowik.com/content/uploads/images/crocs8589.jpg" alt="Geeksforgeeks">
+"https://logowik.com/content/uploads/images/crocs8589.jpg" alt="">
 			</div>
 			<div>
 			<p> 
@@ -367,9 +293,9 @@ footer {
 			<!-- Card 1 -->
 		
 			<div class="card">
-				<div class="card-img">
+				<div class="card-img" id="card1">
 					<img src=
-"https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.6435-9/81073797_1255968494590312_8161091702451339264_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7a1959&_nc_ohc=XPfkB6XygDwAX87PnW1&_nc_ht=scontent.fmnl25-5.fna&oh=00_AfDbIEgS4GoO6shZE32sWirYyzPs43xfCO6-fKip35uoFA&oe=65DED125" alt="User 1">
+"https://scontent.fcrk3-1.fna.fbcdn.net/v/t1.15752-9/417321453_1336083177033655_1447213469234712146_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=FcGalnU_EDkAX_RAIG2&_nc_ht=scontent.fcrk3-1.fna&oh=03_AdTvvSY6feTytcPkMplMsamd53e0AFq_qjw1cAiJnjvFxw&oe=65E06DD0" alt="User 1">
 				</div>
 				<div class="card-info">
 					<h2 class="card-name">Calvin Ocampo</h2>
@@ -380,7 +306,7 @@ footer {
 
 			<!-- Card 2 -->
 		
-			<div class="card">
+			<div class="card" id="card2">
 				<div class="card-img">
 					<img src=
 "https://scontent.fmnl25-5.fna.fbcdn.net/v/t1.6435-9/84690070_1260471581008071_7221666085756469248_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7a1959&_nc_ohc=mMF1P0GFl5EAX9QpXHf&_nc_ht=scontent.fmnl25-5.fna&oh=00_AfDZKFh26oN11Gslq2ffU6nt0kvqm6qI7YnmX2qGQRUAzg&oe=65DEB9A3" alt="User 2">
@@ -394,7 +320,7 @@ footer {
 		
 			<!-- Card 3 -->
 		
-			<div class="card">
+			<div class="card" id="card3">
 				<div class="card-img">
 					<img src=
 "https://scontent.fmnl25-4.fna.fbcdn.net/v/t1.6435-9/82316878_594525447781845_1619425502085251072_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=dd63ad&_nc_ohc=2z-2hfBeRNAAX8QHchI&_nc_ht=scontent.fmnl25-4.fna&oh=00_AfDmVTGm0UxjOov0-b2gxqCIVNlq2B2u2hdxRg6H5QQWCQ&oe=65DEB028" alt="User 3">
@@ -431,6 +357,19 @@ footer {
              })
        
              </script>
+			               <script>
+							document.getElementById('card1').addEventListener('click', function() {
+							  window.location.href = 'calvinresume.html'; // Replace 'page1.html' with the actual URL you want to redirect to
+							});
+						  
+							document.getElementById('card2').addEventListener('click', function() {
+							  window.location.href = 'jj.html'; // Replace 'page2.html' with the actual URL you want to redirect to
+							});
+						  
+							document.getElementById('card3').addEventListener('click', function() {
+							  window.location.href = 'marshiella.html'; // Replace 'page3.html' with the actual URL you want to redirect to
+							});
+						  </script>
 </body>
 
 </html>
