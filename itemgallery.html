@@ -6,115 +6,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <style>
-html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-}
-
 body {
-      font-family: "Helvetica Neue",sans-serif;
-      font-weight: lighter;
+	font-family: Arial, sans-serif;
 }
 
-header {
-      width: 50%;
-      height: 20vh;
-      background: url() no-repeat 50% 50%;
-      background-size: cover;
+/* Header */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOh6vQVICl6CL_ssrAX6beHU7PSkeUHxrbzA&usqp=CAU'); /* Replace 'your-image-url.jpg' with the actual path to your image */
+    background-repeat: repeat;
+    background-position: 1000 0; /* Initial position */
+    background-size: 200px;
 }
 
-.content {
-      width: 94%;
-      margin: 4em auto;
-      font-size: 20px;
-      line-height: 30px;
-      text-align: justify;
-}
 
-.logo {
-      line-height: 60px;
-      position: fixed;
-      float: left;
-      margin: 16px 46px;
-      color: #fff;
-      font-weight: bold;
-      font-size: 20px;
-      letter-spacing: 2px;
-}
-
-nav {
-      position: fixed;
-      width: 100%;
-      line-height: 60px;
-}
-
-nav ul {
-      line-height: 60px;
-      list-style: none;
-      background: rgba(0, 0, 0, 0);
-      overflow: hidden;
-      color: #fff;
-      padding: 0;
-      text-align: right;
-      margin: 0;
-      padding-right: 40px;
-      transition: 1s;
-}
-
-nav.black ul {
-      background: #000;
-}
-
-nav ul li {
-      display: inline-block;
-      padding: 16px 40px;;
-}
-
-nav ul li a {
-      text-decoration: none;
-      color: #fff;
-      font-size: 16px;
-      font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.menu-icon {
-      line-height: 60px;
-      width: 100%;
-      background: #000;
-      text-align: right;
-      box-sizing: border-box;
-      padding: 15px 24px;
-      cursor: pointer;
-      color: #fff;
-      display: none;
-}
-
-      .logo {
-            position: fixed;
-            top: 0;
-            margin-top: 16px;
-      }
-
-      nav ul {
-            max-height: 0px;
-            background: #000;
-      }
-
-      nav.black ul {
-            background: #000;
-      }
-
-      .showing {
-            max-height: 34em;
-      }
-
-      nav ul li {
-            box-sizing: border-box;
-            width: 100%;
-            padding: 24px;
+        nav {
+            background-color: #000000;
+            padding: 10px;
             text-align: center;
-      }
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ebcdcd;
+			text-decoration: none;
+        }
+
+        .logo {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
 
       .menu-icon {
             display: block;
@@ -155,7 +91,39 @@ nav ul li a {
    margin-bottom: 10px;
    font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.wrapper {
+  position: relative;
+  flex-grow: 1;
+  margin: auto;
+  max-width: 1200px;
+  max-height: 1200px;
+  
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 2vmin;
+  justify-items: center;
+  align-items: center;
+}
 
+.crocs {
+  z-index: 1;
+  grid-column: span 2;
+  max-width: 100%;
+  margin-bottom: -52%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: scale(1);
+  transition: all .25s;
+  
+  &:nth-child(7n + 1) {
+    grid-column: 2 / span 2;
+  }
+  
+  &:hover {
+    z-index: 2;
+    transform: scale(2);
+  }
+}
 
     </style>
    <head>
@@ -168,45 +136,28 @@ nav ul li a {
       <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
    </head>
    <body>
-            <div class="wrapper">
             <header>
                   <nav>
-                  <img src="https://1000logos.net/wp-content/uploads/2018/11/Crocs.jpg" alt="Logo" height="40px" class="logo">
-                  <div class="menu-icon">
-                        <i class="fa fa-bars fa-2x"></i>
-                  </div>
-                  <div class="menu">
-                        <ul>
-                              <li><a href="index.html">Home</a></li>
-                              <li><a href="itemgallery.html">Item Gallery</a></li>
-                              <li><a href="about.html">About</a></li>
-                        </ul>
-                  </div>
-                  </nav>
+                        <div class="logo">
+                            <img src="https://i.pinimg.com/1200x/7e/e1/e1/7ee1e143c95b0426c9f5ffe38847c760.jpg" alt="Logo">
+                        </div>
+                        <a href="index.html">Home</a>
+                        <a href="itemgallery.html">Gallery</a>
+                        <a href="about.html">About</a>
+                    </nav>
             </header>
-         <div class="item-gallery">
-            <h2>Item Gallery</h2>
-            <div class="item-container">
-               <div class="item">
-                  <img src="https://crocs.com.ph/cdn/shop/files/209403-410_1_44abf489-85ba-4afe-827d-e9e1d18ed2c6_1000x.jpg?v=1705476999" alt="Item 1">
-                  <p>Men's Classic Sandal V2</p>
-               </div>
-               <div class="item">
-                  <img src="https://crocs.com.ph/cdn/shop/products/0001_208054ClassicSprayDyeClogWhiteMulti208054-94S_1000x.jpg?v=1705896350" alt="Item 2">
-                  <p>Classic Spray Dye Clog in White Multi</p>
-               </div>
-               <div class="item">
-                  <img src="https://crocs.com.ph/cdn/shop/files/191448991422_1_1200x.jpg?v=1705896077" alt="Item 3">
-                  <p>Women Classic Platform Flip in Bone</p>
-               </div>
-               <div class="item">
-                  <img src="https://crocs.com.ph/cdn/shop/products/208648-001_1_1200x.jpg?v=1705897111" alt="Item 4">
-                  <p>Batman Adjustable Strap Clog</p>
-               </div>
-               <!-- Add more item images as needed -->
-            </div>
-         </div>
-         
+            <div class="wrapper">
+                  <img src="https://crocs.com.ph/cdn/shop/products/0001_10001ClassicBlueBolt10001-4KZ_1000x.jpg?v=1705896216" alt="" class="crocs">
+                  <img src="https://crocs.com.ph/cdn/shop/files/208650-75Y_1_1000x.jpg?v=1705897793" alt="" class="crocs">
+                  <img src="https://crocs.com.ph/cdn/shop/files/10001-6WD_1_1200x.jpg?v=1705897470" alt="" class="crocs">
+                  <img src="https://crocs.com.ph/cdn/shop/files/208861-001_1_1000x.jpg?v=1705897787" alt="" class="crocs">
+                  <img src="https://crocs.com.ph/cdn/shop/files/209231_001_1_1200x.jpg?v=1705897518" alt="" class="crocs">
+                  <img src="https://crocs.com.ph/cdn/shop/files/208808_202_1_1200x.jpg?v=1705897554" alt="" class="crocs">
+                  <img src="https://crocs.com.ph/cdn/shop/products/208648-001_1_1200x.jpg?v=1705897111" alt="" class="crocs">
+                  <img src="https://crocs.com.ph/cdn/shop/files/8835031856612_1_1200x.jpg?v=1705896829" alt="" class="crocs">
+                  <img src="https://crocs.com.ph/cdn/shop/files/208651-103_1_1000x.jpg?v=1705897795" alt="" class="crocs">
+                  <img src="https://crocs.com.ph/cdn/shop/files/205451-060_1_1000x.jpg?v=1706088650" alt="" class="crocs">
+                </div>
       <script>
  $(document).ready(function() {
             $(".menu-icon").on("click", function() {
